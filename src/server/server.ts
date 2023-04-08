@@ -2,7 +2,7 @@ import express from "express"
 //import { SEED } from "../db/db"
 //解析
 const bodyParser = require('body-parser')
-
+import cors from 'cors';
 import {GetXlsx}  from  "../../src/excel/xlsx"
 
     /*
@@ -16,9 +16,11 @@ async function getData() {
 getData();
 */
 var server = express();
+server.use(cors());
 server.use(bodyParser.urlencoded({
     extended: true
 }))
+
 server.use(bodyParser.json())
 
 let getQuick =function(url:string,table:string){
