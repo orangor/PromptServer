@@ -1,7 +1,7 @@
 import mysql from "mysql"
 import { CARD_CELL, CARD_NODE } from "../const/const"
 var seed = mysql.createConnection({
-    host: 'localhost',
+    host: '117.176.135.122',
     user: 'root',
     password: '19973232abc',
     port: 3306,
