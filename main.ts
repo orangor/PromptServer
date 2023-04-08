@@ -8,7 +8,7 @@ let dd = [{ firs: 7 }, 2, 3, 4, 5]
 import D from "./src/const/test/test.json"
 import zip = require("./src/const/ZipCodeValidator");
 import "./src/localCode/local_code"
-import "./src/db/db"
+//import "./src/db/db"
 import "./src/server/server"
 
 /**@type (number) */

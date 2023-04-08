@@ -1,5 +1,5 @@
 import express from "express"
-import { SEED } from "../db/db"
+//import { SEED } from "../db/db"
 //解析
 const bodyParser = require('body-parser')
 
@@ -30,14 +30,14 @@ let getQuick =function(url:string,table:string){
         if (table  ){
             let sql_list='SELECT * FROM ' + table + ' WHERE LOCATE( '+"'"+param.like_total+"'"+" ,  text )>0 "+" limit "+ param.start+" , "+param.size;
             let sql_count ='SELECT COUNT(1) as total FROM  ' + table + ' WHERE LOCATE( '+"'"+param.like_total+"'"+" ,  text )>0 ";
-            list = await SEED.getData(sql_list)
-            count= await SEED.getData(sql_count)
+           // list = await SEED.getData(sql_list)
+            //count= await SEED.getData(sql_count)
         }
         res.json({
             method: "POST",
             data:{
                 list:list,
-                count:count[0].total
+               // count:count[0].total
             }
             
         })
@@ -47,7 +47,7 @@ let getQuick =function(url:string,table:string){
        if (table  ){
            let sql_list='SELECT * FROM ' + table + ' WHERE LOCATE( '+"'"+param.like_total+"'"+" ,  text )>0 ";
          
-           list = await SEED.getData(sql_list)
+          // list = await SEED.getData(sql_list)
          
        }
        res.json({
